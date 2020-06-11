@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+
+  apache-php:
+    env_file:
+      - .env
+    image: romeoz/docker-apache-php:7.2
+    ports: 
+      - 8085:80
+    volumes:
+      - ./www/:/var/www/app
+      - "./conf/vhost.conf:/etc/apache2/sites-enabled/app.conf"

@@ -1,0 +1,10 @@
+#MYSQL Config options
+MYSQL_PASSWORD=database
+MYSQL_DATABASE=database
+MYSQL_USER=database
+MYSQL_ROOT_PASSWORD=201125
+MYSQL_PORT=3306
+MYSQL_HOST=mysql
+
+#PMA Config options
+PMA_PORT=8080

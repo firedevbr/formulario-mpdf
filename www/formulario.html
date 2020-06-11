@@ -1,0 +1,269 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    fieldset {
+        border: 0;
+    }
+
+    body,
+    input,
+    select,
+    textarea,
+    button {
+        font-family: sans-serif;
+        font-size: 1em;
+    }
+
+    .grupo:before,
+    .grupo:after {
+        content: " ";
+        display: table;
+    }
+
+    .grupo:after {
+        clear: both;
+    }
+
+    .campo {
+        margin-bottom: 1em;
+    }
+
+    .campo label {
+        margin-bottom: 0.2em;
+        color: #666;
+        display: block;
+    }
+
+    fieldset.grupo .campo {
+        float: left;
+        margin-right: 1em;
+    }
+
+    .campo input[type="text"],
+    .campo input[type="email"],
+    .campo input[type="url"],
+    .campo input[type="tel"],
+    .campo select,
+    .campo textarea {
+        padding: 0.2em;
+        border: 1px solid #CCC;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        display: block;
+    }
+
+    .campo select option {
+        padding-right: 1em;
+    }
+
+    .campo input:focus,
+    .campo select:focus,
+    .campo textarea:focus {
+        background: #FFC;
+    }
+
+    .campo label.checkbox {
+        color: #000;
+        display: inline-block;
+        margin-right: 1em;
+    }
+
+    .botao {
+        font-size: 1.5em;
+        background: #F90;
+        border: 0;
+        margin-bottom: 1em;
+        color: #FFF;
+        padding: 0.2em 0.6em;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    .botao:hover {
+        background: #FB0;
+        box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+        text-shadow: none;
+    }
+
+    .botao,
+    select,
+    label.checkbox {
+        cursor: pointer;
+    }
+</style>
+
+
+<h1>Ficha Cadastral</h1>
+
+<form action="#" method="post">
+    <fieldset>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" style="width: 10em" value="">
+            </div>
+            <div class="campo">
+                <label for="snome">Sobrenome</label>
+                <input type="text" id="snome" name="snome" style="width: 10em" value="">
+            </div>
+        </fieldset>
+        <div class="campo">
+            <label>Sexo</label>
+            <label>
+                <input type="radio" name="sexo" value="masculino"> Masculino
+            </label>
+            <label>
+                <input type="radio" name="sexo" value="feminino"> Feminino
+            </label>
+        </div>
+        <div class="campo">
+            <label for="email">Documento</label>
+            <input type="text" id="email" name="email" style="width: 10em" value="">
+        </div>
+
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="cidade">Endereço</label>
+                <input type="text" id="cidade" name="cidade" style="width: 20em" value="">
+            </div>
+            <div class="campo">
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro" style="width: 10em" value="">
+            </div>
+            <div class="campo">
+                <label for="cidade">Cep</label>
+                <input type="text" id="cidade" name="cidade" style="width: 8em" value="">
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" style="width: 10em" value="">
+        </div>
+
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade" style="width: 10em" value="">
+            </div>
+            <div class="campo">
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado">
+                    <option value=""></option>
+                    <option value="RS">RS</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <label>Dermatite de contato?</label>
+            <label>
+                <input type="radio" name="dermatite" value="sim"> Sim
+            </label>
+            <label>
+                <input type="radio" name="dermatite" value="nao"> Não
+            </label>
+        </div>
+
+        <div class="campo">
+            <label>Termo de consentimento assinado?</label>
+            <label>
+                <input type="radio" name="termo" value="sim"> Sim
+            </label>
+            <label>
+                <input type="radio" name="termo" value="nao"> Não
+            </label>
+        </div>
+
+        <div class="campo">
+            <label>Aceita exposição de caso clínico?</label>
+            <label>
+                <input type="radio" name="exposicao" value="sim"> Sim
+            </label>
+            <label>
+                <input type="radio" name="exposicao" value="nao"> Não
+            </label>
+        </div>
+
+        <div class="campo">
+            <label>Produto Aplicado</label>
+            <label>
+                <input type="radio" name="toxina" value="sim"> Toxina
+            </label>
+            <label>
+                <input type="radio" name="acido" value="nao"> Acido Hialurônico
+            </label>
+        </div>
+
+        <div class="campo">
+            <label>Marca Aplicada</label>
+            <label>
+                <input type="radio" name="allergan" value="sim"> Allergan
+            </label>
+            <label>
+                <input type="radio" name="galderma" value="nao"> Galderma
+            </label>
+        </div>
+
+        <div class="campo">
+            <label>Região Aplicada</label>
+            <label>
+                <input type="radio" name="testa" value="sim"> Testa
+            </label>
+            <label>
+                <input type="radio" name="full" value="nao"> Full
+            </label>
+            <label>
+                <input type="radio" name="retoque" value="nao"> Retoque
+            </label>
+        </div>
+
+        <div class="campo">
+            <label for="data">Data Aplicação</label>
+            <input type="text" placeholder="00/00/0000" id="data" name="data" style="width: 10em" value="">
+        </div>
+
+        <div class="campo">
+            <label for="lote">Lote</label>
+            <input type="text" placeholder="" id="lote" name="lote" style="width: 10em" value="">
+        </div>
+
+
+        <div class="campo">
+            <label for="data">Data Vencimento</label>
+            <input type="text" placeholder="00/00/0000" id="data" name="data" style="width: 10em" value="">
+        </div>
+        
+        <div class="campo">
+            <label>Pós Clínico</label>
+            <label>
+                <input type="radio" name="conformidade" value="conformidade"> Conformidade
+            </label>
+            <label>
+                <input type="radio" name="intercorrencia" value="intercorrencia"> Intercorrência
+            </label>
+        </div>
+
+        <div class="campo">
+            <label>Efeito</label>
+            <label>
+                <input type="radio" name="conformidade" value="conformidade"> Sim
+            </label>
+            <label>
+                <input type="radio" name="intercorrencia" value="intercorrencia"> Não
+            </label>
+        </div>
+
+
+        <div class="campo">
+            <label for="data">Data do Procedimento</label>
+            <input type="text" placeholder="00/00/0000" id="data" name="data" style="width: 10em" value="">
+        </div>
+
+
+
+        <button type="submit" name="submit">Salvar</button>
+    </fieldset>
+</form>
