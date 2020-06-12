@@ -1,4 +1,11 @@
 <style>
+    body {
+        background-image-resize: 6;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('bg2.jpg');
+        background-image-opacity: 0.2;
+    }
     * {
         margin: 0;
         padding: 0;
@@ -92,176 +99,63 @@
     label.checkbox {
         cursor: pointer;
     }
+
+    input[type=text] {
+        border: 2px solid red;
+        border-radius: 4px;
+    }
 </style>
 
 
-<form action="#" method="post">
-    <fieldset>
-        <fieldset class="grupo">
-            <div class="campo">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" style="width: 10em" value="">
-            </div>
-            <div class="campo">
-                <label for="snome">Sobrenome</label>
-                <input type="text" id="snome" name="snome" style="width: 10em" value="">
-            </div>
-        </fieldset>
-        <div class="campo">
-            <label>Sexo</label>
-            <label>
-                <input type="radio" name="sexo" value="masculino"> Masculino
-            </label>
-            <label>
-                <input type="radio" name="sexo" value="feminino"> Feminino
-            </label>
+<h1 style="
+    text-align: center;
+    background: rgba(18, 151, 147, 0.1);
+    padding-left: 0px;
+    margin-left: 0px;
+    color: lightslategray;
+">
+    FORMULÁRIO DE APLICAÇÃO DE PREENCHEDORES
+</h1>
+<div style="display: inline-block;">
+    <div align="left" style="width: 72%;float: left; padding-left: 5px;">
+        <b>Paciente</b>: <i>Gerialdo da Costa</i>
+    </div>
+    <div align="left" style="width: 25%">
+        <b>Data de nascimento</b>: <i>22/04/1996</i>
+    </div>
+</div>
+<hr>
+<div align="center" style="display: inline-block; margin-top: 25px;">
+    <div align="left" style="width: 40%;float: left;">
+        <img style="
+                max-height: 600px;
+                max-width: 800px;"
+             src="face_ficha_clinica.png"
+        />
+    </div>
+    <div align="left" style="width: 45%;float: left; text-align: left; padding-left: 45px;">
+        <div id="avaliacaoDiv" style="padding-left: 65px;">
+            <b style="font-size: 18px;">Avaliação</b>: 	&nbsp;	&nbsp;	&nbsp;	&nbsp;
+            <b>​Dia</b>: <i>16/06/2020</i>&nbsp;&nbsp;
+            <b>Horário</b>: <i>10:00</i>
         </div>
-        <div class="campo">
-            <label for="email">Documento</label>
-            <input type="text" id="email" name="email" style="width: 10em" value="">
+        <hr style="margin-bottom: 3px;">
+        <hr style="margin-bottom: 10px; margin-top: 0px;">
+        <div id="produtoUtilizadoDiv" style="padding-left: 65px; margin-top: 20px;">
+            <b>Produto Utilizado</b>:&nbsp;&nbsp;&nbsp;&nbsp; <i>Toxina ou Ácido Hialurônico</i><br><br>
+            <b>Região tratada</b>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Testa</i><br><br>
+            <b>Unidades no total</b>:&nbsp;&nbsp;&nbsp;&nbsp;<i>10</i><br><br>
+            <b>Data da aplicação</b>:&nbsp;&nbsp;&nbsp;&nbsp;<i>16/06/2020</i><br><br>
+            <b>Lote</b>:&nbsp;&nbsp;&nbsp;&nbsp;<i>52</i><br><br>
         </div>
-
-        <fieldset class="grupo">
-            <div class="campo">
-                <label for="cidade">Endereço</label>
-                <input type="text" id="cidade" name="cidade" style="width: 20em" value="">
-            </div>
-            <div class="campo">
-                <label for="bairro">Bairro</label>
-                <input type="text" id="bairro" name="bairro" style="width: 10em" value="">
-            </div>
-            <div class="campo">
-                <label for="cidade">Cep</label>
-                <input type="text" id="cidade" name="cidade" style="width: 8em" value="">
-            </div>
-        </fieldset>
-
-        <div class="campo">
-            <label for="telefone">Telefone</label>
-            <input type="text" id="telefone" name="telefone" style="width: 10em" value="">
+        <hr style="margin-bottom: 3px;">
+        <hr style="margin-bottom: 10px; margin-top: 0px;">
+        <div id="produtoUtilizado2Div" style="padding-left: 65px; margin-top: 20px;">
+            <b>Produto Utilizado</b>:&nbsp;&nbsp;&nbsp;&nbsp; <i>Toxina ou Ácido Hialurônico</i><br><br>
+            <b>Região tratada</b>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Testa</i><br><br>
+            <b>Unidades no total</b>:&nbsp;&nbsp;&nbsp;&nbsp;<i>10</i><br><br>
+            <b>Data da aplicação</b>:&nbsp;&nbsp;&nbsp;&nbsp;<i>16/06/2020</i><br><br>
+            <b>Lote</b>:&nbsp;&nbsp;&nbsp;&nbsp;<i>52</i><br><br>
         </div>
-
-        <fieldset class="grupo">
-            <div class="campo">
-                <label for="cidade">Cidade</label>
-                <input type="text" id="cidade" name="cidade" style="width: 10em" value="">
-            </div>
-            <div class="campo">
-                <label for="estado">Estado</label>
-                <select name="estado" id="estado">
-                    <option value=""></option>
-                    <option value="RS">RS</option>
-                </select>
-            </div>
-        </fieldset>
-
-        <div class="campo">
-            <label>Dermatite de contato?</label>
-            <label>
-                <input type="radio" name="dermatite" value="sim"> Sim
-            </label>
-            <label>
-                <input type="radio" name="dermatite" value="nao"> Não
-            </label>
-        </div>
-
-        <div class="campo">
-            <label>Termo de consentimento assinado?</label>
-            <label>
-                <input type="radio" name="termo" value="sim"> Sim
-            </label>
-            <label>
-                <input type="radio" name="termo" value="nao"> Não
-            </label>
-        </div>
-
-        <div class="campo">
-            <label>Aceita exposição de caso clínico?</label>
-            <label>
-                <input type="radio" name="exposicao" value="sim"> Sim
-            </label>
-            <label>
-                <input type="radio" name="exposicao" value="nao"> Não
-            </label>
-        </div>
-
-        <div class="campo">
-            <label>Produto Aplicado</label>
-            <label>
-                <input type="radio" name="toxina" value="sim"> Toxina
-            </label>
-            <label>
-                <input type="radio" name="acido" value="nao"> Acido Hialurônico
-            </label>
-        </div>
-
-        <div class="campo">
-            <label>Marca Aplicada</label>
-            <label>
-                <input type="radio" name="allergan" value="sim"> Allergan
-            </label>
-            <label>
-                <input type="radio" name="galderma" value="nao"> Galderma
-            </label>
-        </div>
-
-        <div class="campo">
-            <label>Região Aplicada</label>
-            <label>
-                <input type="radio" name="testa" value="sim"> Testa
-            </label>
-            <label>
-                <input type="radio" name="full" value="nao"> Full
-            </label>
-            <label>
-                <input type="radio" name="retoque" value="nao"> Retoque
-            </label>
-        </div>
-
-        <div class="campo">
-            <label for="data">Data Aplicação</label>
-            <input type="text" placeholder="00/00/0000" id="data" name="data" style="width: 10em" value="">
-        </div>
-
-        <div class="campo">
-            <label for="lote">Lote</label>
-            <input type="text" placeholder="" id="lote" name="lote" style="width: 10em" value="">
-        </div>
-
-
-        <div class="campo">
-            <label for="data">Data Vencimento</label>
-            <input type="text" placeholder="00/00/0000" id="data" name="data" style="width: 10em" value="">
-        </div>
-
-        <div class="campo">
-            <label>Pós Clínico</label>
-            <label>
-                <input type="radio" name="conformidade" value="conformidade"> Conformidade
-            </label>
-            <label>
-                <input type="radio" name="intercorrencia" value="intercorrencia"> Intercorrência
-            </label>
-        </div>
-
-        <div class="campo">
-            <label>Efeito</label>
-            <label>
-                <input type="radio" name="conformidade" value="conformidade"> Sim
-            </label>
-            <label>
-                <input type="radio" name="intercorrencia" value="intercorrencia"> Não
-            </label>
-        </div>
-
-
-        <div class="campo">
-            <label for="data">Data do Procedimento</label>
-            <input type="text" placeholder="00/00/0000" id="data" name="data" style="width: 10em" value="">
-        </div>
-
-
-
-        <button type="submit" name="submit">Salvar</button>
-    </fieldset>
-</form>
+    </div>
+</div>
