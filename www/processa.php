@@ -33,6 +33,15 @@ $filesCreated = [];
 $tarName = __DIR__ . '/tmp/' . uniqid('arquivos_') . '.tar';
 $tarFile = new \PharData($tarName);
 
+$srcImagem = 'face_ficha_clinica.png';
+$imgPath = '';
+
+if (isset($_FILES['imagem'])) {
+    $srcImagem = 'tmp/img/' . $_FILES['imagem']['name'];
+    $imgPath   = __DIR__ . '/tmp/img/' . $_FILES['imagem']['name'];
+    move_uploaded_file($_FILES['imagem']['tmp_name'], $imgPath);
+}
+
 foreach ($records as $record) {
     $totalFields  = count($record);
     $totalColumns = ceil($totalFields / RECORDS_PER_COLUMN);
@@ -56,6 +65,7 @@ foreach ($records as $record) {
     }
 
     $baseTemplate = str_replace('#DIVSDADOS#', $columns, $baseTemplate);
+    $baseTemplate = str_replace('#SRC_IMAGEM#', $srcImagem, $baseTemplate);
     $mpdf = new \Mpdf\Mpdf(['orientation' => 'L']);
     $mpdf->WriteHTML($baseTemplate);
 
@@ -93,6 +103,9 @@ ob_clean();
 flush();
 readfile($fullTarName);
 unlink($fullTarName);
+if (file_exists($imgPath)) {
+    unlink($imgPath);
+}
 
 function detectDelimiter($csvFile): string
 {
